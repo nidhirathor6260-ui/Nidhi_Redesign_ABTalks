@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { EDGE_CASE_PRESETS } from './data/userStates';
 import { EdgeCaseSelector } from './components/EdgeCaseSelector';
 import { Navbar } from './components/Navbar';
@@ -20,7 +20,7 @@ export function App() {
     if (userState.streakShieldsAvailable > 0) {
       setUserState((prev) => ({
         ...prev,
-        currentStreak: 10, // Restored streak
+        currentStreak: 10,
         streakShieldsAvailable: prev.streakShieldsAvailable - 1,
         bannerMessage: '⚡ Streak Shield activated! Your 10-day streak has been restored.'
       }));

@@ -20,9 +20,9 @@ A mobile-first, proof-of-work coding challenge platform designed for Indian coll
 
 ## ✨ Key Features & Thoughtful Enhancements
 
-1. **Mobile-First Design (390px Viewport)**: Optimized for late-night mobile phone usage after college lectures, complete with a responsive bottom navigation bar.
+1. **Mobile-First Production Design (390px Viewport)**: Clean, realistic production interface optimized for late-night mobile phone usage after college lectures, complete with a responsive bottom navigation bar.
 2. **Interactive Live Drawing Canvas (`/day/12`)**: An in-browser collaborative canvas demo where reviewers can test drawing vector shapes with touch/mouse and watch an animated peer cursor (`Priya (VIT)`) move in real-time.
-3. **Edge-Case Simulator Bar**: Integrated toolbar allowing reviewers to toggle between 4 student states live:
+3. **Discrete Demo State Switcher**: A subtle floating toggle drawer in the bottom-right corner allowing judges to test real-world student states without cluttering the realistic UI:
    - **Day 1 / Cold Start** (0 streak, initial state)
    - **Missed Day 11 Rescue Mode** (Broken streak with Streak Recovery Quest)
    - **Active Day 12** (Active 12-day streak)

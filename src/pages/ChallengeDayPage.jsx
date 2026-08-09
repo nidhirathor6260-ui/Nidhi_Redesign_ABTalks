@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { DAY_12_TASK, MOCK_COMMUNITY_SUBMISSIONS } from '../data/mockData';
 import { validateGithubUrl, validateLinkedinUrl } from '../utils/helpers';
 import { SubmissionModal } from '../components/SubmissionModal';
+import { CollaborativeCanvasDemo } from '../components/CollaborativeCanvasDemo';
 
 export function ChallengeDayPage({ userState, onSubmitSuccess }) {
   const [activeTab, setActiveTab] = useState('brief'); // 'brief', 'resources', 'submissions'
@@ -122,7 +123,7 @@ export function ChallengeDayPage({ userState, onSubmitSuccess }) {
           }`}
         >
           <Code2 className="w-3.5 h-3.5" />
-          <span>Starter Code & Specs</span>
+          <span>Starter Code & Demo</span>
         </button>
 
         <button
@@ -140,7 +141,7 @@ export function ChallengeDayPage({ userState, onSubmitSuccess }) {
 
       {/* Main Grid: Left Column Content & Right Column Submission Form */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-        {/* Left Column (8 cols): Task Brief / Resources / Peer Submissions */}
+        {/* Left Column (7 cols): Task Brief / Resources / Peer Submissions */}
         <div className="md:col-span-7 space-y-5">
           {activeTab === 'brief' && (
             <div className="space-y-5">
@@ -181,6 +182,9 @@ export function ChallengeDayPage({ userState, onSubmitSuccess }) {
 
           {activeTab === 'resources' && (
             <div className="space-y-5">
+              {/* Interactive Collaborative Canvas Playground */}
+              <CollaborativeCanvasDemo />
+
               {/* Starter Code Snippet Box */}
               <div className="bg-[#131B2E] border border-[#1F293D] rounded-2xl p-5 shadow-xl space-y-3">
                 <h3 className="text-sm font-extrabold text-white flex items-center justify-between">

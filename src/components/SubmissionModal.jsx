@@ -2,16 +2,19 @@ import React, { useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import { CheckCircle2, Sparkles, Share2, Github, Linkedin, ArrowRight, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { playChimeSound } from '../utils/audio';
 
 export function SubmissionModal({ isOpen, onClose, dayNumber, githubUrl, linkedinUrl, newStreak }) {
   useEffect(() => {
     if (isOpen) {
       // Trigger festive canvas confetti animation
       confetti({
-        particleCount: 120,
+        particleCount: 140,
         spread: 80,
         origin: { y: 0.6 }
       });
+      // Play celebratory chime sound
+      playChimeSound();
     }
   }, [isOpen]);
 
